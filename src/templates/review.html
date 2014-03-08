@@ -1,11 +1,9 @@
-<div class="">
-    <div class="review-details"><%= eso.p.t('from_LOCATION_TIME', {location: _.str.capitalize(model.city()), time: model.date()} ) %></div>
-</div>
-<div class="review-container">
-    <div class="review-description">
-        <span class="author-name"><%= _.str.capitalize(model.name()) %>:</span> <%= model.comment() %>
-    </div>
+<div class="review-header">
     <div class="review-image" data-value="<%= model.value() %>">
         <span class="icon icon-face-<%= model.value() %>"></span>
     </div>
+    <div class="author-details">
+        <span class="author-name"><%= _.str.capitalize(model.name()) %></span> from  <span class="author-city"><%= _.str.capitalize(model.city()) %></span> <span class="review-date"><%= model.date() %></span>
+    </div>
 </div>
+<div class="review-description"><%= model.comment() %></div>

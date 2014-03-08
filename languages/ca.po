@@ -8,22 +8,10 @@ msgstr ""
 "Language: ca\n"
 
 #: 
-msgid "date"
-msgstr "Escrit"
-
-#: 
-msgid "city"
-msgstr "Població:"
-
-#: 
 #, fuzzy
 msgctxt "singular"
 msgid "N_review"
 msgstr "%{number} valoració"
-
-#: 
-msgid "author"
-msgstr "Autor:"
 
 #: 
 msgid "powered_by"
@@ -41,16 +29,11 @@ msgstr "%{number} valoracions"
 
 #: 
 #, fuzzy
-msgid "grade"
-msgstr "Valoració:"
-
-#: 
-#, fuzzy
 msgid "what_our_customers_think_about_us"
 msgstr "El que pensen els nostres compradors"
 
 #: 
 #, fuzzy
-msgid "from_LOCATION_TIME"
-msgstr "Des de %{location}, fa %{time}"
+msgid "NAME_from_LOCATION"
+msgstr "Des de %{location}, %{time}"
 

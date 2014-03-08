@@ -4,10 +4,10 @@
 @eso-background-color: transparent;
 @eso-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @eso-font-size-base: 14px;
-@eso-icon-color: green;
-@eso-base-color: black;
-@eso-link-color: red;
-@eso-featured-color: red;
+@eso-icon-color: #008EAA;
+@eso-base-color: #666;
+@eso-link-color: #008EAA;
+@eso-featured-color: #008EAA;
 
 // Imports
 @import "_mixins.less";
@@ -19,10 +19,11 @@ body {
   font-size: @eso-font-size-base;
   background-color: @eso-background-color;
   min-width: 160px; // Sets a minimum width for small devices
-  max-width: 400px; // Sets a minimum width for small devices
+  max-width: 340px; // Sets a minimum width for small devices
   text-align: center;
   margin: 0;
   padding: 10px;
+  color: @eso-base-color;
   a {
     color: @eso-link-color;
     .transitionComplete(color);
@@ -33,29 +34,46 @@ body {
   }
 }
 
+* {
+  .box-sizing(border-box);
+}
+
 // Average view
 #eso-average {
+  padding-bottom: 20px;
   margin-bottom: 20px;
+  border-bottom: solid 1px fade(@eso-base-color, 30%);
+  display: inline-block;
+  width: 100%;
   .intro-text {
     color: @eso-base-color;
-    opacity: 0.5;
     margin: 0 0 20px 0;
+    font-weight: normal;
+    font-style: italic;
+    font-size: @eso-font-size-base;
   }
   .average-container {
     padding-bottom: 20px;
     position: relative;
+    width: 100%;
   }
   .review-image {
+    float: left;
+    width: 50%;
     .icon {
       font-size: 120px;
       color: @eso-icon-color;
     }
   }
+  .average-details {
+    float: left;
+    width: 50%;
+    padding-top: 30px;
+    text-align: left;
+  }
   .review-amount {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    font-size: ceil(@eso-font-size-base * 0.9);
+    //font-size: ceil(@eso-font-size-base * 0.9);
+    font-weight: bold;
   }
 }
 
@@ -63,34 +81,39 @@ body {
 #eso-reviews {
   margin-bottom: 20px;
   text-align: left;
-  min-height: 80px;
-  .review-container, .review-details {
+  min-height: 100px;
+  padding: 12px;
+  padding-bottom: 20px;
+  .review-header {
+    display: inline-block;
     width: 100%;
-    display: block;
-  }
-  .review-description {
-    float: left;
-    width: 80%;
-    .author-name {
-      font-weight: bold;
-      color: mix(@eso-featured-color, @eso-base-color, 50%);
-      font-size: ceil(@eso-font-size-base * 1.1);
-    }
+    margin-bottom: 12px;
   }
   .review-image {
-    float: left;
-    width: 20%;
-    text-align: right;
-    font-size: 32px;
-    color: fade(@eso-icon-color, 50%);
-  }
-  .review-details {
-    font-size: ceil(@eso-font-size-base * 0.9);
-    opacity: 0.5;
-    padding-bottom: 5px;
-    border-bottom: solid 1px fade(@eso-base-color, 10%);
-    margin-bottom: 10px;
     display: inline-block;
+    font-size: 32px;
+    color: @eso-icon-color;
+  }
+  .author-details {
+    display: inline-block;
+    padding: 10px 0 0 12px;
+  }
+  .author-name {
+    font-weight: bold;
+    font-size: ceil(@eso-font-size-base * 1.2);
+  }
+  .author-city {
+    font-weight: bold;
+  }
+  .review-date {
+    font-size: ceil(@eso-font-size-base * 0.7);
+    text-transform: uppercase;
+    padding-left: 12px;
+    opacity: 0.7;
+  }
+  .review-description {
+    font-style: italic;
+    line-height: 1.3;
   }
 }
 

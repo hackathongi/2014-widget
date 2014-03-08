@@ -8,22 +8,10 @@ msgstr ""
 "Language: en-in\n"
 
 #: 
-msgid "date"
-msgstr "Written"
-
-#: 
-msgid "city"
-msgstr "City:"
-
-#: 
 #, fuzzy
 msgctxt "singular"
 msgid "N_review"
 msgstr "%{number} review"
-
-#: 
-msgid "author"
-msgstr "Author:"
 
 #: 
 msgid "powered_by"
@@ -41,16 +29,11 @@ msgstr "%{number} reviews"
 
 #: 
 #, fuzzy
-msgid "grade"
-msgstr "Grade:"
-
-#: 
-#, fuzzy
 msgid "what_our_customers_think_about_us"
 msgstr "What our customers think about us"
 
 #: 
 #, fuzzy
-msgid "from_LOCATION_TIME"
-msgstr "From %{location}, %{time}"
+msgid "NAME_from_LOCATION"
+msgstr "%{name}, from %{location}"
 

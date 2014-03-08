@@ -59,13 +59,14 @@ body {
   font-size: 14px;
   background-color: transparent;
   min-width: 160px;
-  max-width: 400px;
+  max-width: 340px;
   text-align: center;
   margin: 0;
   padding: 10px;
+  color: #666666;
 }
 body a {
-  color: #ff0000;
+  color: #008eaa;
   transition-property: color;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
@@ -87,61 +88,84 @@ body a:active {
 body a:hover,
 body a:active,
 body a:focus {
-  color: #cc0000;
+  color: #006377;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #eso-average {
+  padding-bottom: 20px;
   margin-bottom: 20px;
+  border-bottom: solid 1px rgba(102, 102, 102, 0.3);
+  display: inline-block;
+  width: 100%;
 }
 #eso-average .intro-text {
-  color: #000000;
-  opacity: 0.5;
+  color: #666666;
   margin: 0 0 20px 0;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
 }
 #eso-average .average-container {
   padding-bottom: 20px;
   position: relative;
+  width: 100%;
+}
+#eso-average .review-image {
+  float: left;
+  width: 50%;
 }
 #eso-average .review-image .icon {
   font-size: 120px;
-  color: #008000;
+  color: #008eaa;
+}
+#eso-average .average-details {
+  float: left;
+  width: 50%;
+  padding-top: 30px;
+  text-align: left;
 }
 #eso-average .review-amount {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  font-size: 13px;
+  font-weight: bold;
 }
 #eso-reviews {
   margin-bottom: 20px;
   text-align: left;
-  min-height: 80px;
+  min-height: 100px;
+  padding: 12px;
+  padding-bottom: 20px;
 }
-#eso-reviews .review-container,
-#eso-reviews .review-details {
+#eso-reviews .review-header {
+  display: inline-block;
   width: 100%;
-  display: block;
-}
-#eso-reviews .review-description {
-  float: left;
-  width: 80%;
-}
-#eso-reviews .review-description .author-name {
-  font-weight: bold;
-  color: #800000;
-  font-size: 16px;
+  margin-bottom: 12px;
 }
 #eso-reviews .review-image {
-  float: left;
-  width: 20%;
-  text-align: right;
-  font-size: 32px;
-  color: rgba(0, 128, 0, 0.5);
-}
-#eso-reviews .review-details {
-  font-size: 13px;
-  opacity: 0.5;
-  padding-bottom: 5px;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
   display: inline-block;
+  font-size: 32px;
+  color: #008eaa;
+}
+#eso-reviews .author-details {
+  display: inline-block;
+  padding: 10px 0 0 12px;
+}
+#eso-reviews .author-name {
+  font-weight: bold;
+  font-size: 17px;
+}
+#eso-reviews .author-city {
+  font-weight: bold;
+}
+#eso-reviews .review-date {
+  font-size: 10px;
+  text-transform: uppercase;
+  padding-left: 12px;
+  opacity: 0.7;
+}
+#eso-reviews .review-description {
+  font-style: italic;
+  line-height: 1.3;
 }

@@ -17,7 +17,7 @@ function transformToAssocArray( prmstr ) {
 }
 // Parse the URL parameters to a proper JSON Object
 eso.urlParams = getUrlParameters();
-if ( _.size(eso.urlParams) > 0 ) eso.urlParams = JSON.parse(decodeURIComponent(eso.urlParams.data));
+//if ( _.size(eso.urlParams) > 0 ) eso.urlParams = decodeURIComponent(eso.urlParams.data);
 
 
 
@@ -26,20 +26,14 @@ if ( _.size(eso.urlParams) > 0 ) eso.urlParams = JSON.parse(decodeURIComponent(e
 // Setup the initial options
 var initialOptions = {};
 initialOptions.locale = {};
+initialOptions.development = {};
 // Get some parameters from URL if they're present
 if ( _.size(eso.urlParams) > 0 ) {
-    if ( eso.urlParams.locale.language && (eso.urlParams.locale.language != null) ) initialOptions.locale.language = eso.urlParams.locale.language;
+    if ( eso.urlParams.language && (eso.urlParams.language != null) ) initialOptions.locale.language = eso.urlParams.language;
+    if ( eso.urlParams.customerId && (eso.urlParams.customerId != null) ) initialOptions.development.customerId = eso.urlParams.customerId;
+    if ( eso.urlParams.apiKey && (eso.urlParams.apiKey != null) ) initialOptions.development.apiKey = eso.urlParams.apiKey;
+    if ( eso.urlParams.apiUrl && (eso.urlParams.apiUrl != null) ) initialOptions.development.apiUrl = eso.urlParams.apiUrl;
 }
-
-// Put other config params
-initialOptions.development = {
-    customerId: null,
-    apiUrl: null,
-    apiKey: 'theKey'
-};
-initialOptions.locale = {
-    language: 'ca'
-};
 
 
 // Start the app

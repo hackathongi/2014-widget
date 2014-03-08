@@ -11,7 +11,7 @@ eso.options = {
     customerId: 'farmaInstant',
     apiKey: null,
     apiUrl: null,
-    url: 'http://localhost/widget',
+    url: 'http://widget.eshopinion.com',
     language: 'en'
 };
 

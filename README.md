@@ -2,6 +2,39 @@
 
 Read carefully this documentation before proceed to commit any change or deploy a new version.
 
+Widget integration
+==================
+
+Call Javascript
+`<script type="text/javascript" src="http://widget.eshopinion.com/src/injection.js"></script>`
+
+Execute init function
+`<script>eso.init()</script>`
+
+The script will search for a div with the ID `#eshopinion`, and inject the iframe.
+
+Widget options
+==============
+
+You can pass some options to the init function, using this:
+
+```js
+eso.init({
+    optionName: value,
+    (...)
+});
+```
+
+##divId
+Set the divId to inject the widget
+
+##customerId
+Specify the customerId
+
+##language
+Sets the main language, actually accepts en, es & ca.
+
+
 Development requirements
 ========================
 

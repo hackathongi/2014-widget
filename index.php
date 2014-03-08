@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>HKG Widget</title>
+    <title>eso Widget</title>
     <meta id="projectViewport" name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--[if lt IE 9 ]>
@@ -26,16 +26,17 @@
 
 <body>
 
-    <div id="hkg-app" class="">
+    <div id="eso-app" class="">
 
-        <header id="hkg-header">Titol</header>
+        <header id="eso-header">Titol</header>
 
-        <main id="hkg-main">Contingut</main>
+        <main id="eso-main">Contingut</main>
 
-        <footer id="hkg-footer">Peu</footer>
+        <footer id="eso-footer">Peu</footer>
 
     </div>
 
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/underscore.js"></script>
     <script type="text/javascript" src="assets/js/backbone.js"></script>
     <script type="text/javascript" src="assets/js/underscore.string.js"></script>
@@ -48,13 +49,13 @@
 
     <script type="text/javascript" src="src/collections/reviews.js"></script>
 
-    <script type="text/javascript" src="src/views/hkg.js"></script>
+    <script type="text/javascript" src="src/views/eso.js"></script>
 
 
 
     <script type="text/javascript">
         // Declare the namespace
-        var hkg = hkg || {};
+        var eso = eso || {};
 
          // Get the URL parameters functions
         function getUrlParameters() {
@@ -72,19 +73,19 @@
             return params;
         }
          // Parse the URL parameters to a proper JSON Object
-        hkg.urlParams = getUrlParameters();
-        if (_.size(hkg.urlParams) > 0) hkg.urlParams = JSON.parse(decodeURIComponent(hkg.urlParams.data));
+        eso.urlParams = getUrlParameters();
+        if (_.size(eso.urlParams) > 0) eso.urlParams = JSON.parse(decodeURIComponent(eso.urlParams.data));
 
 
 
-         // Init the HKG Widget
+         // Init the eso Widget
 
          // Setup the initial options
         var initialOptions = {};
-        initialOptions.booking = {};
+        initialOptions.locale = {};
          // Get some parameters from URL if they're present
-        if (_.size(hkg.urlParams) > 0) {
-            if (hkg.urlParams.locale.language && (hkg.urlParams.locale.language != null)) initialOptions.locale.language = hkg.urlParams.locale.language;
+        if (_.size(eso.urlParams) > 0) {
+            if (eso.urlParams.locale.language && (eso.urlParams.locale.language != null)) initialOptions.locale.language = eso.urlParams.locale.language;
         }
 
          // Put other config params
@@ -99,8 +100,8 @@
 
 
          // Start the app
-        hkg.hkgView = new hkg.HkgView({
-            root: hkg,
+        eso.esoView = new eso.EsoView({
+            root: eso,
             initialOptions: initialOptions
         });
     </script>

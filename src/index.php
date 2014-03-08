@@ -11,7 +11,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>HKG Widget</title>
+    <title>eso Widget</title>
     <meta id="projectViewport" name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--[if lt IE 9 ]>

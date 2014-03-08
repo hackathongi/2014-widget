@@ -1,13 +1,13 @@
 
-var hkg = hkg || {};
+var eso = eso || {};
 
 // Reviews Collection
 // ---------------
 
-hkg.Reviews = Backbone.Collection.extend({
+eso.Reviews = Backbone.Collection.extend({
 
     // Reference to this collection's model.
-    model: hkg.Review,
+    model: eso.Review,
     url: '../rest/reviews',
     fetched: false,
     root: null,

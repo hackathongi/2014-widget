@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             folder: 'bower_components/',
             // Define the path to original third party library files (without minification)
             originalFiles: [
-                '<%= grunt.params.js.folder %>jquery/jquery.js',
+                '<%= grunt.params.js.folder %>jquery/dist/jquery.js',
                 '<%= grunt.params.js.folder %>underscore/underscore.js',
                 '<%= grunt.params.js.folder %>backbone/backbone.js',
                 '<%= grunt.params.js.folder %>underscore.string/lib/underscore.string.js',
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        hkgDev: {
+        esoDev: {
             params: {}
         }
     });
@@ -75,6 +75,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftpscript');
 
     // Init task.
-    grunt.registerTask('dev', ['hkgDev']);
+    grunt.registerTask('dev', ['esoDev']);
 
 };

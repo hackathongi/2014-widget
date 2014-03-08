@@ -1,20 +1,20 @@
 /**
- * HKG Widget Main View
+ * eso Widget Main View
  * Author: Daniel Garcia
  * Date: 08/03/11
  */
 
 // Prevent early calls on the app namespace
-var hkg = hkg || {};
+var eso = eso || {};
 
 // -------------------------------------------------------------
-// HkgView:
+// esoView:
 // the global main app view
 // -------------------------------------------------------------
 
-hkg.HkgView = Backbone.View.extend({
+eso.EsoView = Backbone.View.extend({
 
-    el: '#hkg-widget',
+    el: '#eso-widget',
     root: null,
 
     events: {

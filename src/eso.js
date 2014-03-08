@@ -1,5 +1,5 @@
 // Declare the namespace
-var hkg = hkg || {};
+var eso = eso || {};
 
 // Get the URL parameters functions
 function getUrlParameters() {
@@ -16,19 +16,19 @@ function transformToAssocArray( prmstr ) {
     return params;
 }
 // Parse the URL parameters to a proper JSON Object
-hkg.urlParams = getUrlParameters();
-if ( _.size(hkg.urlParams) > 0 ) hkg.urlParams = JSON.parse(decodeURIComponent(hkg.urlParams.data));
+eso.urlParams = getUrlParameters();
+if ( _.size(eso.urlParams) > 0 ) eso.urlParams = JSON.parse(decodeURIComponent(eso.urlParams.data));
 
 
 
-// Init the HKG Widget
+// Init the eso Widget
 
 // Setup the initial options
 var initialOptions = {};
-initialOptions.booking = {};
+initialOptions.locale = {};
 // Get some parameters from URL if they're present
-if ( _.size(hkg.urlParams) > 0 ) {
-    if ( hkg.urlParams.locale.language && (hkg.urlParams.locale.language != null) ) initialOptions.locale.language = hkg.urlParams.locale.language;
+if ( _.size(eso.urlParams) > 0 ) {
+    if ( eso.urlParams.locale.language && (eso.urlParams.locale.language != null) ) initialOptions.locale.language = eso.urlParams.locale.language;
 }
 
 // Put other config params
@@ -43,4 +43,4 @@ initialOptions.locale = {
 
 
 // Start the app
-hkg.hkgView = new hkg.HkgView({root:hkg, initialOptions:initialOptions});
+eso.esoView = new eso.EsoView({root:eso, initialOptions:initialOptions});

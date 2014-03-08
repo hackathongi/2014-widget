@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-    grunt.registerMultiTask('hkgDev', 'Description', function() {
+    grunt.registerMultiTask('esoDev', 'Description', function() {
 
         // Tell grunt this task is asynchronous.
         var done = this.async();
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
                         collections: 'src/collections/**/*.js',
                         views: 'src/views/**/*.js',
                         dist: {},
-                        mainApp: 'src/hkg.js'
+                        mainApp: 'src/eso.js'
                     },
                     sections: {
                         main: 'src/templates/main.html'

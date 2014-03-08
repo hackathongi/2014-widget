@@ -1,10 +1,10 @@
 
-var hkg = hkg || {};
+var eso = eso || {};
 
 // Review Model
 // ----------
 
-hkg.Review = Backbone.DeepModel.extend({
+eso.Review = Backbone.DeepModel.extend({
 
     // Default attributes for review.
     defaults: {

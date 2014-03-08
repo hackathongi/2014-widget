@@ -128,6 +128,7 @@ Changelog
 
 ### 0.0.1 (Beta)
 
+* Rename namespaces to eso (eshopinion)
 * Add grunt auto-generated dev files to this commit
 * Add automation Grunt tasks
 * Add index.php file (widget entry point)

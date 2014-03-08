@@ -6,7 +6,7 @@ Widget integration
 ==================
 
 Call Javascript
-`<script type="text/javascript" src="http://widget.eshopinion.com/src/injection.js"></script>`
+`<script type="text/javascript" src="http://widget.eshopinion.com/dist/eshopinion.js"></script>`
 
 Execute init function
 `<script>eso.init()</script>`
@@ -161,6 +161,7 @@ Changelog
 
 ### 0.0.1 (Beta)
 
+* Add distribution task & files
 * Translate templates
 * Add Languages
 * Add Advertising view

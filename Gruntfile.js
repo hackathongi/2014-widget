@@ -64,6 +64,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         esoDev: {
             params: {}
+        },
+        esoDist: {
+            params: {}
         }
     });
 
@@ -85,5 +88,6 @@ module.exports = function(grunt) {
 
     // Init task.
     grunt.registerTask('dev', ['esoDev']);
+    grunt.registerTask('dist', ['esoDist']);
 
 };

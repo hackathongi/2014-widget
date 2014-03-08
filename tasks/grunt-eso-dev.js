@@ -41,6 +41,21 @@ module.exports = function(grunt) {
         grunt.config.set('copy', copy);
         taskList.push('copy');
         // ------------------------
+        // Less-Tasks
+        var less = {
+            init: {
+                options: {
+                    compress: false
+                },
+                files: {
+                    //compiling styles.less into styles.css
+                    "assets/css/styles.css":"assets/less/styles.less"
+                }
+            }
+        };
+        grunt.config.set('less', less);
+        taskList.push('less');
+        // ------------------------
         // JST Tasks
         var jst = {
             compile: {

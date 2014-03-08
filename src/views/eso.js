@@ -37,9 +37,9 @@ eso.EsoView = Backbone.View.extend({
     },
 
     render: function() {
-        // Create the navigation view and append to DOM
-        //this.root.navigationView = new rho.NavigationView({root:this.root});
-        //his.$el.find('#rho-navigation').append(this.root.navigationView.el);
+        // Create the average view and append to DOM
+        this.root.averageView = new eso.AverageView({root:this.root});
+        this.$el.find('#eso-header').replaceWith(this.root.averageView.render().el);
 
     }
 });

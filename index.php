@@ -26,7 +26,9 @@
 
 <body>
 
-    <div id="eso-app" class="">
+    <div id="eso-widget" class="">
+
+        <div id="eso-average"></div>
 
         <header id="eso-header">Titol</header>
 
@@ -49,6 +51,7 @@
 
     <script type="text/javascript" src="src/collections/reviews.js"></script>
 
+    <script type="text/javascript" src="src/views/average.js"></script>
     <script type="text/javascript" src="src/views/eso.js"></script>
 
 

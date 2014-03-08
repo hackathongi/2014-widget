@@ -128,6 +128,8 @@ Changelog
 
 ### 0.0.1 (Beta)
 
+* Add LESS stylesheet & Grunt compile task
+* Add average View files
 * Rename namespaces to eso (eshopinion)
 * Add grunt auto-generated dev files to this commit
 * Add automation Grunt tasks

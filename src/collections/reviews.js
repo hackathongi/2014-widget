@@ -39,6 +39,17 @@ eso.Reviews = Backbone.Collection.extend({
     },
 
     // -------------------
+    /* COLLECTION FUNCTIONS */
+    // -------------------
+    /* getAverageValue()
+     * returns the average value (integer from 0 to 5) */
+    getAverageValue: function() {
+        var totalValue = 0;
+        this.map(function(review){totalValue += parseInt(review.value());});
+        return Math.round(totalValue / this.length);
+    },
+
+    // -------------------
     /* SERVER FUNCTIONS */
     // -------------------
 

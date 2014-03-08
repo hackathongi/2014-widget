@@ -19,7 +19,6 @@ body {
   font-size: @eso-font-size-base;
   background-color: @eso-background-color;
   min-width: 160px; // Sets a minimum width for small devices
-  max-width: 340px; // Sets a minimum width for small devices
   text-align: center;
   margin: 0;
   padding: 10px;
@@ -69,6 +68,7 @@ body {
     float: left;
     width: 50%;
     padding-top: 30px;
+    padding-right: 20px;
     text-align: left;
   }
   .review-amount {
@@ -78,7 +78,7 @@ body {
 }
 
 // Review view
-#eso-reviews {
+#eso-reviews, #eso-reviews-2 {
   margin-bottom: 20px;
   text-align: left;
   min-height: 100px;
@@ -116,6 +116,51 @@ body {
     line-height: 1.3;
   }
 }
+#eso-reviews-2 {
+  display: none;
+}
 
 
 // MediaQueries
+@media screen and (max-width:280px) {
+  #eso-average {
+    .review-image {
+      padding-top: 20px;
+      .icon {
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:320px) {
+  #eso-reviews {
+    .review-date {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width:480px) {
+  #eso-average, #eso-reviews {
+    float: left;
+    width: 50%;
+  }
+  #eso-average {
+    border-bottom: none;
+    border-right: solid 1px fade(@eso-base-color, 30%);
+  }
+}
+
+@media screen and (min-width:840px) {
+  #eso-average, #eso-reviews, #eso-reviews-2 {
+    float: left;
+    width: 33%;
+  }
+  #eso-reviews-2 {
+    display: block;
+  }
+  #eso-reviews {
+    border-right: solid 1px fade(@eso-base-color, 30%);
+  }
+}

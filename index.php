@@ -31,6 +31,7 @@
         <div id="eso-average"></div>
 
         <div id="eso-reviews"></div>
+        <div id="eso-reviews-2"></div>
 
         <div id="eso-adv"></div>
 

@@ -59,7 +59,6 @@ body {
   font-size: 14px;
   background-color: transparent;
   min-width: 160px;
-  max-width: 340px;
   text-align: center;
   margin: 0;
   padding: 10px;
@@ -126,46 +125,96 @@ body a:focus {
   float: left;
   width: 50%;
   padding-top: 30px;
+  padding-right: 20px;
   text-align: left;
 }
 #eso-average .review-amount {
   font-weight: bold;
 }
-#eso-reviews {
+#eso-reviews,
+#eso-reviews-2 {
   margin-bottom: 20px;
   text-align: left;
   min-height: 100px;
   padding: 12px;
   padding-bottom: 20px;
 }
-#eso-reviews .review-header {
+#eso-reviews .review-header,
+#eso-reviews-2 .review-header {
   display: inline-block;
   width: 100%;
   margin-bottom: 12px;
 }
-#eso-reviews .review-image {
+#eso-reviews .review-image,
+#eso-reviews-2 .review-image {
   display: inline-block;
   font-size: 32px;
   color: #008eaa;
 }
-#eso-reviews .author-details {
+#eso-reviews .author-details,
+#eso-reviews-2 .author-details {
   display: inline-block;
   padding: 10px 0 0 12px;
 }
-#eso-reviews .author-name {
+#eso-reviews .author-name,
+#eso-reviews-2 .author-name {
   font-weight: bold;
   font-size: 17px;
 }
-#eso-reviews .author-city {
+#eso-reviews .author-city,
+#eso-reviews-2 .author-city {
   font-weight: bold;
 }
-#eso-reviews .review-date {
+#eso-reviews .review-date,
+#eso-reviews-2 .review-date {
   font-size: 10px;
   text-transform: uppercase;
   padding-left: 12px;
   opacity: 0.7;
 }
-#eso-reviews .review-description {
+#eso-reviews .review-description,
+#eso-reviews-2 .review-description {
   font-style: italic;
   line-height: 1.3;
+}
+#eso-reviews-2 {
+  display: none;
+}
+@media screen and (max-width: 280px) {
+  #eso-average .review-image {
+    padding-top: 20px;
+  }
+  #eso-average .review-image .icon {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #eso-reviews .review-date {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) {
+  #eso-average,
+  #eso-reviews {
+    float: left;
+    width: 50%;
+  }
+  #eso-average {
+    border-bottom: none;
+    border-right: solid 1px rgba(102, 102, 102, 0.3);
+  }
+}
+@media screen and (min-width: 840px) {
+  #eso-average,
+  #eso-reviews,
+  #eso-reviews-2 {
+    float: left;
+    width: 33%;
+  }
+  #eso-reviews-2 {
+    display: block;
+  }
+  #eso-reviews {
+    border-right: solid 1px rgba(102, 102, 102, 0.3);
+  }
 }

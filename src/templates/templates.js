@@ -32,7 +32,7 @@ this["JST"]["src/templates/main.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<div id="eso-widget" class="">\r\n\r\n    <div id="eso-average"></div>\r\n\r\n    <div id="eso-reviews"></div>\r\n\r\n    <div id="eso-adv"></div>\r\n\r\n</div>';
+__p += '<div id="eso-widget" class="">\r\n\r\n    <div id="eso-average"></div>\r\n\r\n    <div id="eso-reviews"></div>\r\n    <div id="eso-reviews-2"></div>\r\n\r\n    <div id="eso-adv"></div>\r\n\r\n</div>';
 
 }
 return __p

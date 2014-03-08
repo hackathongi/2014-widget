@@ -46,6 +46,11 @@ eso.EsoView = Backbone.View.extend({
             parentView: this
         });
         this.$el.find('#eso-reviews').append(this.root.reviewView.render().el);
+        this.root.reviewView2 = new eso.ReviewView({
+            root:this.root,
+            parentView: this
+        });
+        this.$el.find('#eso-reviews-2').append(this.root.reviewView2.render().el);
         // Create the advertising view if we've a freemium account
         if (true) {
             // Create the review view and append to DOM
@@ -187,11 +192,18 @@ eso.EsoView = Backbone.View.extend({
     updateReview: function() {
         // Remove the actual review view
         this.root.reviewView.remove();
+        this.root.reviewView2.remove();
         // Create the review view and append to DOM
         this.root.reviewView = new eso.ReviewView({
             root:this.root,
             parentView: this
         });
         this.$el.find('#eso-reviews').append(this.root.reviewView.render().el);
+        // Create the review view and append to DOM
+        this.root.reviewView2 = new eso.ReviewView({
+            root:this.root,
+            parentView: this
+        });
+        this.$el.find('#eso-reviews-2').append(this.root.reviewView2.render().el);
     }
 });

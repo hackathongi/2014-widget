@@ -1,0 +1,14 @@
+{
+    "name": "HKG Widget",
+    "dependencies": {
+        "jquery": "1.x",
+        "underscore": "~1.6.0",
+        "backbone": "1.1.2",
+        "underscore.string": "~2.3.3",
+        "backbone-deep-model": "~0.10.4",
+        "polyglot": "~0.3.0",
+        "modernizr": "~2.7.1",
+        "respond": "~1.4.2",
+        "es5-shim": "~2.3.0"
+    }
+}

@@ -128,6 +128,8 @@ Changelog
 
 ### 0.0.1 (Beta)
 
+* Translate templates
+* Add Languages
 * Add Advertising view
 * Styling something
 * Add MomentJs library

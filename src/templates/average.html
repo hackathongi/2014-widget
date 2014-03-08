@@ -1,6 +1,8 @@
 <h1>Valoració dels nostres usuaris</h1>
 <h2>Mitjana: <%= averageValue %></h2>
-        <div class="review-image" data-value="<%= averageValue %>"></div>
+        <div class="review-image" data-value="<%= averageValue %>">
+            <span class="icon icon-face-<%= averageValue %>"></span>
+        </div>
 <div id="review-amount">
     <a href="#">de <span class="amount-value"><%= reviewAmount %></span> opinions [+]</a>
 </div>

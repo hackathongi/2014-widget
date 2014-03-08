@@ -8,7 +8,9 @@ __p += '<h1>Valoració dels nostres usuaris</h1>\r\n<h2>Mitjana: ' +
 ((__t = ( averageValue )) == null ? '' : __t) +
 '</h2>\r\n        <div class="review-image" data-value="' +
 ((__t = ( averageValue )) == null ? '' : __t) +
-'"></div>\r\n<div id="review-amount">\r\n    <a href="#">de <span class="amount-value">' +
+'">\r\n            <span class="icon icon-face-' +
+((__t = ( averageValue )) == null ? '' : __t) +
+'"></span>\r\n        </div>\r\n<div id="review-amount">\r\n    <a href="#">de <span class="amount-value">' +
 ((__t = ( reviewAmount )) == null ? '' : __t) +
 '</span> opinions [+]</a>\r\n</div>';
 

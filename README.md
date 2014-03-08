@@ -128,6 +128,7 @@ Changelog
 
 ### 0.0.1 (Beta)
 
+* Add FaceFonts ;)
 * Add LESS stylesheet & Grunt compile task
 * Add average View files
 * Rename namespaces to eso (eshopinion)

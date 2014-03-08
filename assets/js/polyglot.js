@@ -107,7 +107,7 @@
     options = options == null ? {} : options;
     // allow number as a pluralization shortcut
     if (typeof options === 'number') {
-      options = {smart_count: options};
+      options = {number: options};
     }
     var phrase = this.phrases[key] || options._ || (this.allowMissing ? key : '');
     if (phrase === '') {
@@ -115,7 +115,7 @@
       result = key;
     } else {
       options = clone(options);
-      result = choosePluralForm(phrase, this.currentLocale, options.smart_count);
+      result = choosePluralForm(phrase, this.currentLocale, options.number);
       result = interpolate(result, options);
     }
     return result;

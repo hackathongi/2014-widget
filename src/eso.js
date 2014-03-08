@@ -33,12 +33,12 @@ if ( _.size(eso.urlParams) > 0 ) {
 
 // Put other config params
 initialOptions.development = {
-    rootUrl: '',
-    restUrl: ''
+    customerId: null,
+    apiUrl: null,
+    apiKey: 'theKey'
 };
-initialOptions.apiKey = 'theKey';
 initialOptions.locale = {
-    language: 'es'
+    language: 'ca'
 };
 
 

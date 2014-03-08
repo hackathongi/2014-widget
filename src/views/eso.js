@@ -27,11 +27,70 @@ eso.EsoView = Backbone.View.extend({
         if (options && options.root) this.root = options.root;
         if (options && options.initialOptions) this.initialOptions = options.initialOptions;
 
+        this.initializeOptions( (function() {
+            this.initializeTranslations( 'all', (function(){
+                this.initializeFakeReviews((function(){
+                    this.render();
+                }).bind(this));
+            }).bind(this));
+        }).bind(this) );
+    },
+
+    render: function() {
+        // Create the average view and append to DOM
+        this.root.averageView = new eso.AverageView({root:this.root});
+        this.$el.find('#eso-average').replaceWith(this.root.averageView.render().el);
+        // Create the review view and append to DOM
+        this.root.reviewView = new eso.ReviewView({
+            root:this.root,
+            parentView: this
+        });
+        this.$el.find('#eso-reviews').append(this.root.reviewView.render().el);
+        // Create the advertising view if we've a freemium account
+        if (true) {
+            // Create the review view and append to DOM
+            this.root.advView = new eso.AdvView({root:this.root});
+            this.$el.find('#eso-adv').html(this.root.advView.render().el);
+        }
+
+    },
+
+    initializeOptions: function (completed) {
+        // Construct the options model
+        this.root.options = new eso.Options([], {root:this.root});
+        // Fix the URL for the REST service, if it was defined
+        /*this.root.options.url = (this.initialOptions.development.apiUrl) ? (this.initialOptions.development.apiUrl + this.root.options.url) : this.root.options.url;
+        // Load initial options from the API
+        this.root.options.load( (function(){
+            // Merge the options loaded from server, with the options received by plugin integration
+            $.extend(true, this.root.options.attributes, this.initialOptions);
+            // TODO: REVIEW: Override the cultures option (because it's an array and it's extended by default, not replaced)
+            this.root.options.attributes.locale.culturesAllowed = this.initialOptions.locale.culturesAllowed;
+            // Callback
+            completed();
+        }).bind(this) );*/
+        $.extend(true, this.root.options.attributes, this.initialOptions);
+
         // Set the first Identification object
         this.root.id = {
             secretKey: this.initialOptions.apiKey || null
         };
 
+
+        completed();
+    },
+
+    initializeTranslations: function (language, completed) {
+        // Set the translations model and load data from server
+        this.root.translations = new eso.Translations([], {root:this.root});
+        this.root.translations.load( (function() {
+            this.root.translations.parseTranslations();
+            this.root.translations.setTranslation( this.root.options.language() );
+            completed();
+        }).bind(this) );
+    },
+
+    initializeFakeReviews: function (completed) {
         // Create the fake collection
         this.root.reviews = new eso.Reviews(
             [
@@ -122,28 +181,7 @@ eso.EsoView = Backbone.View.extend({
             ]
             ,{root:this.root}
         );
-
-        this.render();
-
-    },
-
-    render: function() {
-        // Create the average view and append to DOM
-        this.root.averageView = new eso.AverageView({root:this.root});
-        this.$el.find('#eso-average').replaceWith(this.root.averageView.render().el);
-        // Create the review view and append to DOM
-        this.root.reviewView = new eso.ReviewView({
-            root:this.root,
-            parentView: this
-        });
-        this.$el.find('#eso-reviews').append(this.root.reviewView.render().el);
-        // Create the advertising view if we've a freemium account
-        if (true) {
-            // Create the review view and append to DOM
-            this.root.advView = new eso.AdvView({root:this.root});
-            this.$el.find('#eso-adv').html(this.root.advView.render().el);
-        }
-
+        completed();
     },
 
     updateReview: function() {

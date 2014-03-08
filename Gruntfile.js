@@ -50,6 +50,13 @@ module.exports = function(grunt) {
                 '<%= grunt.params.oldExplorerJs.parsedFolder %>es5-sham.js',
                 '<%= grunt.params.oldExplorerJs.parsedFolder %>respond.js'
             ]
+        },
+        // Define here some localization parameters
+        localization: {
+            // Define the global languages used in the ESO (which complete translations are available)
+            esoLanguages: ['en','es','ca'],
+            // Define the path where to find the language native sources (json formatted)
+            esoLanguagesPath: 'languages/'
         }
     };
 

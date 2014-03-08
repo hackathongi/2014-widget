@@ -145,12 +145,3 @@ body a:focus {
   margin-bottom: 10px;
   display: inline-block;
 }
-#eso-reviews .author-city {
-  float: left;
-  width: 50%;
-}
-#eso-reviews .review-date {
-  float: left;
-  width: 50%;
-  text-align: right;
-}

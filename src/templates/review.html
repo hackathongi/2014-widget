@@ -1,6 +1,5 @@
-<div class="review-details">
-    <div class="author-city">From:  <%= _.str.capitalize(model.city()) %></div>
-    <div class="review-date"><%= model.date() %></div>
+<div class="">
+    <div class="review-details"><%= eso.p.t('from_LOCATION_TIME', {location: _.str.capitalize(model.city()), time: model.date()} ) %></div>
 </div>
 <div class="review-container">
     <div class="review-description">

@@ -41,6 +41,49 @@ module.exports = function(grunt) {
         grunt.config.set('copy', copy);
         taskList.push('copy');
         // ------------------------
+        // Start Replace
+        var replace = {
+            // Replace polyglot default number argument (smart_count) to used number argument (number)
+            polyglot: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'smart_count',
+                            replacement: 'number'
+                        }
+                    ],
+                    usePrefix: false,
+                    force: true
+                },
+                files: [
+                    {expand: true, flatten: true, src: ['assets/js/polyglot.js'], dest: 'assets/js/'}
+                ]
+            }
+        };
+        grunt.config.set('replace', replace);
+        taskList.push('replace');
+        // ------------------------
+        // File-creator tasks
+        var fileCreator = {
+            esoLanguages: {
+                // Read PoEditor native json language files and parse it adding to a single properly formatted json file concatenated
+                "assets/localization/languages.json": function(fs, fd, done) {
+                    var esoLanguagesConcatenated = '{';
+                    var lastLanguage = grunt.params.localization.esoLanguages[grunt.params.localization.esoLanguages.length - 1];
+                    grunt.params.localization.esoLanguages.forEach(function(language){
+                        esoLanguagesConcatenated += '"' + language + '" : ';
+                        esoLanguagesConcatenated += grunt.file.read(grunt.params.localization.esoLanguagesPath + language + '.json');
+                        esoLanguagesConcatenated += (language != lastLanguage) ? ', ' : '}';
+                    });
+                    fs.writeSync(fd, esoLanguagesConcatenated);
+                    done();
+                }
+            }
+        };
+        grunt.config.set('file-creator', fileCreator);
+        taskList.push('file-creator');
+        // ------------------------
+        // ------------------------
         // Less-Tasks
         var less = {
             init: {

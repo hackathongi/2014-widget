@@ -1,9 +1,9 @@
-<h6 class="intro-text">Els nostres usuaris diuen:</h6>
+<h6 class="intro-text"><%= eso.p.t('what_our_customers_think_about_us') %></h6>
 <div class="average-container">
     <div class="review-image" data-value="<%= averageValue %>">
         <span class="icon icon-face-<%= averageValue %>"></span>
     </div>
     <div class="review-amount">
-        <a href="#">de <span class="amount-value"><%= reviewAmount %></span> opinions</a>
+        <a href="#"><span class="amount-value"><%= eso.p.t('N_review', reviewAmount ) %></span></a>
     </div>
 </div>

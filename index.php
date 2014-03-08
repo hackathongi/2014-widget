@@ -46,7 +46,9 @@
 
     <script type="text/javascript" src="src/templates/templates.js"></script>
 
+    <script type="text/javascript" src="src/models/options.js"></script>
     <script type="text/javascript" src="src/models/review.js"></script>
+    <script type="text/javascript" src="src/models/translations.js"></script>
 
     <script type="text/javascript" src="src/collections/reviews.js"></script>
 
@@ -94,12 +96,12 @@
 
          // Put other config params
         initialOptions.development = {
-            rootUrl: '',
-            restUrl: ''
+            customerId: null,
+            apiUrl: null,
+            apiKey: 'theKey'
         };
-        initialOptions.apiKey = 'theKey';
         initialOptions.locale = {
-            language: 'es'
+            language: 'ca'
         };
 
 

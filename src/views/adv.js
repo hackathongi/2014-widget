@@ -1,9 +1,9 @@
-eso.AverageView = Backbone.View.extend({
+eso.AdvView = Backbone.View.extend({
 
-    template: JST['src/templates/average.html'],
+    template: JST['src/templates/adv.html'],
 
     tagName: 'div',
-    id: 'eso-average',
+    id: 'eso-adv',
 
     initialize: function(options) {
         // Get some options params
@@ -13,9 +13,7 @@ eso.AverageView = Backbone.View.extend({
     render: function() {
         // Compile the template with all suitable params
         this.$el.html(this.template({
-            root:this.root,
-            averageValue: this.root.reviews.getAverageValue(),
-            reviewAmount: this.root.reviews.length
+            root:this.root
         }));
         // Return the view
         return this;

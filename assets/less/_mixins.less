@@ -1,0 +1,21 @@
+.esoTransition(@property, @duration, @timing) {
+  transition-property: @property;
+  transition-duration: @duration;
+  transition-timing-function: @timing;
+  -webkit-transition-property: @property;
+  -webkit-transition-duration: @duration;
+  -webkit-transition-timing-function: @timing;
+}
+.transitionOut(@property: all, @duration: 0.3s) {
+  .esoTransition(@property, @duration, ease-out);
+}
+.transitionIn(@property: all, @duration: 0.15s) {
+  .esoTransition(@property, @duration, ease-in);
+}
+
+.transitionComplete(@property: all, @duration: 0.3s) {
+  .esoTransition(@property, @duration, ease-out);
+  &:hover, &:focus, &:active {
+    .esoTransition(@property, (@duration / 2), ease-in);
+  }
+}

@@ -12,7 +12,8 @@ module.exports = function(grunt) {
                 '<%= grunt.params.js.folder %>backbone/backbone.js',
                 '<%= grunt.params.js.folder %>underscore.string/lib/underscore.string.js',
                 '<%= grunt.params.js.folder %>backbone-deep-model/distribution/deep-model.js',
-                '<%= grunt.params.js.folder %>polyglot/build/polyglot.js'
+                '<%= grunt.params.js.folder %>polyglot/build/polyglot.js',
+                '<%= grunt.params.js.folder %>momentjs/min/moment-with-langs.js'
             ],
             // Define the dev destination javascripts directory (to store third party library files)
             parsedFolder: 'assets/js/',
@@ -24,7 +25,8 @@ module.exports = function(grunt) {
                 '<%= grunt.params.js.parsedFolder %>backbone.js',
                 '<%= grunt.params.js.parsedFolder %>underscore.string.js',
                 '<%= grunt.params.js.parsedFolder %>deep-model.js',
-                '<%= grunt.params.js.parsedFolder %>polyglot.js'
+                '<%= grunt.params.js.parsedFolder %>polyglot.js',
+                '<%= grunt.params.js.parsedFolder %>moment-with-langs.js'
             ]
         },
         // Here we refer to those libraries used to enable IE<=8 modern browser features

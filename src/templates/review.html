@@ -1,0 +1,12 @@
+<div class="review-details">
+    <div class="author-city">From:  <%= _.str.capitalize(model.city()) %></div>
+    <div class="review-date"><%= model.date() %></div>
+</div>
+<div class="review-container">
+    <div class="review-description">
+        <span class="author-name"><%= _.str.capitalize(model.name()) %>:</span> <%= model.comment() %>
+    </div>
+    <div class="review-image" data-value="<%= model.value() %>">
+        <span class="icon icon-face-<%= model.value() %>"></span>
+    </div>
+</div>

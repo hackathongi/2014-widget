@@ -52,7 +52,14 @@ eso.Review = Backbone.DeepModel.extend({
     /* date()
      * returns the rate's date */
     date: function() {
-        return this.get('rate.date');
+        var day = moment.unix(parseInt(this.get('rate.date')));
+        return day.fromNow();
+    },
+
+    /* city()
+     * returns the author's city */
+    city: function() {
+        return this.get('author.city');
     }
 
 });

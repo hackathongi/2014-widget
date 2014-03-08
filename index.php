@@ -30,11 +30,9 @@
 
         <div id="eso-average"></div>
 
-        <header id="eso-header">Titol</header>
+        <div id="eso-reviews"></div>
 
-        <main id="eso-main">Contingut</main>
-
-        <footer id="eso-footer">Peu</footer>
+        <div id="eso-adv"></div>
 
     </div>
 
@@ -44,6 +42,7 @@
     <script type="text/javascript" src="assets/js/underscore.string.js"></script>
     <script type="text/javascript" src="assets/js/deep-model.js"></script>
     <script type="text/javascript" src="assets/js/polyglot.js"></script>
+    <script type="text/javascript" src="assets/js/moment-with-langs.js"></script>
 
     <script type="text/javascript" src="src/templates/templates.js"></script>
 
@@ -51,8 +50,10 @@
 
     <script type="text/javascript" src="src/collections/reviews.js"></script>
 
+    <script type="text/javascript" src="src/views/adv.js"></script>
     <script type="text/javascript" src="src/views/average.js"></script>
     <script type="text/javascript" src="src/views/eso.js"></script>
+    <script type="text/javascript" src="src/views/review.js"></script>
 
 
 

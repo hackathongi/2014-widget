@@ -1,23 +1,105 @@
 
+
 // Declare variables
 @eso-background-color: transparent;
+@eso-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@eso-font-size-base: 14px;
+@eso-icon-color: green;
+@eso-base-color: black;
+@eso-link-color: red;
+@eso-featured-color: red;
 
 // Imports
+@import "_mixins.less";
 @import "_icons.less";
 
 // Layout
 body {
+  font-family: @eso-font-family;
+  font-size: @eso-font-size-base;
   background-color: @eso-background-color;
-  min-width: 320px; // Sets a minimum width for small devices
+  min-width: 160px; // Sets a minimum width for small devices
+  max-width: 400px; // Sets a minimum width for small devices
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  a {
+    color: @eso-link-color;
+    .transitionComplete(color);
+    text-decoration: none;
+    &:hover, &:active, &:focus {
+      color: darken(@eso-link-color, 10%);
+    }
+  }
 }
 
 // Average view
-.review-image {
-  min-width: 300px;
-  min-height: 300px;
-  //background-color: darkgreen;
-  .icon {
-    font-size: 48px;
+#eso-average {
+  margin-bottom: 20px;
+  .intro-text {
+    color: @eso-base-color;
+    opacity: 0.5;
+    margin: 0 0 20px 0;
+  }
+  .average-container {
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .review-image {
+    .icon {
+      font-size: 120px;
+      color: @eso-icon-color;
+    }
+  }
+  .review-amount {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: ceil(@eso-font-size-base * 0.9);
+  }
+}
+
+// Review view
+#eso-reviews {
+  margin-bottom: 20px;
+  text-align: left;
+  min-height: 80px;
+  .review-container, .review-details {
+    width: 100%;
+    display: block;
+  }
+  .review-description {
+    float: left;
+    width: 80%;
+    .author-name {
+      font-weight: bold;
+      color: mix(@eso-featured-color, @eso-base-color, 50%);
+      font-size: ceil(@eso-font-size-base * 1.1);
+    }
+  }
+  .review-image {
+    float: left;
+    width: 20%;
+    text-align: right;
+    font-size: 32px;
+    color: fade(@eso-icon-color, 50%);
+  }
+  .review-details {
+    font-size: ceil(@eso-font-size-base * 0.9);
+    opacity: 0.5;
+    padding-bottom: 5px;
+    border-bottom: solid 1px fade(@eso-base-color, 10%);
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .author-city {
+    float: left;
+    width: 50%;
+  }
+  .review-date {
+    float: left;
+    width: 50%;
+    text-align: right;
   }
 }
 
